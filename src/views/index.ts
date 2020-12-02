@@ -1,2 +1,2 @@
-export { Game } from "./Game/Game";
-export { Landing } from "./Landing/Landing";
+export { default as LandingView } from "./Landing/Landing";
+export { default as ComparePageView } from "./ComparePage";
