@@ -4,7 +4,7 @@ export const requestApi = async (
 	data = null,
 	headers = {}
 ) => {
-	const apiUrl = "http://localhost:5000";
+	const apiUrl = process.env.REACT_APP_API_URL;
 
 	if (!path.startsWith("/")) {
 		path = `/${path}`;

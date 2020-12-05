@@ -53,7 +53,7 @@ const ComparePage: React.FC<ComparePageProps> = ({
 	const classes = useStyles();
 	const { slug }: { slug: string } = useParams();
 
-	const [tabValue, setTabValue] = useState('info');
+	const [tabValue, setTabValue] = useState('offers');
 
 	const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
 		setTabValue(newValue);
