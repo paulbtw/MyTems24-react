@@ -33,20 +33,28 @@ const ProductOffersListItem: React.FC<ProductOffersListItemProps> = ({
 		return htmlString;
 	};
 
+	const hrefUrl = (id: string) => {
+		return `http://localhost:3000/redirect/${id}`;
+	};
+
 	return (
 		<ListItemLink
 			button
-			href={offer.url}
+			href={hrefUrl(offer.id)}
 			target='_blank'
 			rel='noreferrer noopener'
 			disabled={!offer.inStock}
 		>
-			<Typography variant='subtitle1' component='h4' display='block'>
-				{offer.rawName}
-			</Typography>
-			<Typography variant='subtitle2' component='h5' display='inline'>
-				{offer.platform}
-			</Typography>
+			<div>
+				<Typography variant='subtitle1' component='h4'>
+					{offer.rawName}
+				</Typography>
+			</div>
+			<div>
+				<Typography variant='subtitle2' component='h5'>
+					{offer.platform}
+				</Typography>
+			</div>
 			<Tooltip
 				title={
 					<React.Fragment>
